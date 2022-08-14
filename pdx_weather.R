@@ -22,33 +22,33 @@ pdx_weather <- read_csv(pdx_daily,
   drop_na(tmax) # drop NA values where temperature data is not recorded
 
 # check for outliers on all variables
-pdx_weather %>% 
-  ggplot(aes(x=date, y=tmax)) +
-  geom_line() 
+# pdx_weather %>% 
+#   ggplot(aes(x=date, y=tmax)) +
+#   geom_line() 
+# 
+# pdx_weather %>% 
+#   ggplot(aes(x=tmax)) +
+#   geom_histogram(binwidth = 3) # no noticeable outliers
+# 
+# pdx_weather %>% 
+#   ggplot(aes(x=date, y=prcp)) +
+#   geom_line()
+# 
+# pdx_weather %>% 
+#   ggplot(aes(x=prcp)) +
+#   geom_histogram() +
+#   scale_y_continuous(limits = c(0, 2500)) # no noticeable outliers
+# 
+# pdx_weather %>% 
+#   ggplot(aes(x=date, y=snow)) +
+#   geom_line()
+# 
+# pdx_weather %>% 
+#   slice_max(n=10, snow) # max snowfall for one day was 14.4 inches on January 21, 1943. 
+# 
+# pdx_weather %>% 
+#   ggplot(aes(x=snow)) +
+#   geom_histogram() + 
+#   scale_y_continuous(limits = c(0, 100)) # no noticeable outliers
 
-pdx_weather %>% 
-  ggplot(aes(x=tmax)) +
-  geom_histogram(binwidth = 3) # no noticeable outliers
-
-pdx_weather %>% 
-  ggplot(aes(x=date, y=prcp)) +
-  geom_line()
-
-pdx_weather %>% 
-  ggplot(aes(x=prcp)) +
-  geom_histogram() +
-  scale_y_continuous(limits = c(0, 2500)) # no noticeable outliers
-
-pdx_weather %>% 
-  ggplot(aes(x=date, y=snow)) +
-  geom_line()
-
-pdx_weather %>% 
-  slice_max(n=10, snow) # max snowfall for one day was 14.4 inches on January 21, 1943. 
-
-pdx_weather %>% 
-  ggplot(aes(x=snow)) +
-  geom_histogram() + 
-  scale_y_continuous(limits = c(0, 100)) # no noticeable outliers
-
-
+# 
