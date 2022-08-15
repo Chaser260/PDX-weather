@@ -20,7 +20,7 @@ pdx_weather <- read_csv(pdx_daily,
          SNOW = SNOW/25.4) %>% #convert from mm to inches
   clean_names() %>% 
   drop_na(tmax) # drop NA values where temperature data is not recorded
-
+tail(pdx_weather)
 # check for outliers on all variables
 # pdx_weather %>% 
 #   ggplot(aes(x=date, y=tmax)) +
