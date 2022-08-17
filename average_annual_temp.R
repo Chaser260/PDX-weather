@@ -36,6 +36,7 @@ pdx_weather %>%
   # filter(month == 1) %>% slice_min(t_diff, n = 5) %>% # check 5 coldest Januarys
   ggplot(aes(x = month, y = t_diff, group = year, color = is_this_year)) +
   geom_line() +
+  scale_x_continuous(expand = c(0,0)) +
   scale_color_manual(breaks = c(F, T),
                      values = c("light gray", "dodgerblue"),
                      guide = "none") +
