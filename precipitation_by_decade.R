@@ -22,5 +22,18 @@ pdx_weather %>%
     )) %>% 
   group_by(decade) %>% 
   summarize(total_prcp = sum(prcp)) %>% 
-  ggplot(aes(x = decade, y = total_prcp)) +
+  ggplot(aes(x = decade, y = total_prcp, fill = total_prcp)) +
   geom_col() +
+  scale_y_continuous(limits = c(0, 425),
+                     expand = c(0,0)) +
+  scale_fill_binned() +
+  labs(y = "Total Precipitation (in)",
+       title = "Total Precipitation By Decade",
+       subtitle = "It has not been drier than usual since I moved to Portland in 2011") +
+  theme(axis.title.x = element_blank(),
+        axis.line = element_line(),
+        panel.background = element_blank(),
+        panel.grid = element_blank(),
+        plot.title.position = "plot")
+
+ggsave("figures/precipitation_by_decade.png")
