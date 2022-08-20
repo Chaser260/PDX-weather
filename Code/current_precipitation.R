@@ -1,4 +1,4 @@
-source("pdx_weather.R")
+source("Code/pdx_weather.R")
 library(ggtext)
 library(scales)
 # Looking at Precipitation in Portland

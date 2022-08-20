@@ -1,4 +1,4 @@
-source("pdx_weather.R")
+source("Code/pdx_weather.R")
 
 # Visualize how temperature in 2022 compares to historical temperatures.
 
@@ -47,4 +47,5 @@ pdx_weather %>%
        subtitle = "") +
   theme(axis.ticks = element_blank())
 
+ggsave("Figures/average_annual_temp.png")
                     
