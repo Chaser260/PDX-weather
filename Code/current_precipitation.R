@@ -15,7 +15,7 @@ pdx_weather %>%
          month = month(date),
          day = day(date),
          is_this_year = year == this_year) %>% #add year, month & day columns
-  filter(year != 1938 & (month != 2 & day != 29)) %>% #remove partial year and leap days
+  filter(year != 1938) %>% #remove partial year 
   group_by(year) %>% 
   mutate(cum_prcp = cumsum(prcp)) %>% #use mutate() instead of summarize() to keep month & day columns
   ungroup() %>% 
