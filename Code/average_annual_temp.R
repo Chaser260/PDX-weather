@@ -18,8 +18,12 @@ pdx_weather %>%
   geom_line() +
   geom_smooth(se = F, method = lm) +
   theme_classic() +
-  labs(x = "Temperature Change", y = "Year", title = "PDX Temperature Change") +
+  labs(x = NULL, y = "Temperature Change", 
+       title = "PDX Temperature Change",
+       subtitle = "The average temperature in Portland has been steadily increasing over the years") +
   theme(axis.ticks = element_blank())
+
+ggsave("Figures/pdx_temperature change.png")
 
 
 pdx_weather %>% 
