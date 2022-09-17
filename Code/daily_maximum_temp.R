@@ -7,15 +7,15 @@ annotation <- data.frame(
   label = "Normalized temperature from 1951-1980"
 )
 
-normalized_temp <- pdx_weather %>% 
-  select(date, tmax) %>% 
-  mutate(year = year(date), 
-         month = month(date),
-         day = day(date)) %>%
-  filter(year >= 1988 & year <=2011) %>% #remove partial year and leap days
-  group_by(year, month, day) %>% 
-  summarize(tmax = mean(tmax), .groups = "drop") %>% 
-  mutate(new_date = ymd(glue("2022-{month}-{day}")))
+# normalized_temp <- pdx_weather %>% 
+#   select(date, tmax) %>% 
+#   mutate(year = year(date), 
+#          month = month(date),
+#          day = day(date)) %>%
+#   filter(year >= 1988 & year <=2011) %>% #remove partial year and leap days
+#   group_by(year, month, day) %>% 
+#   summarize(tmax = mean(tmax), .groups = "drop") %>% 
+#   mutate(new_date = ymd(glue("2022-{month}-{day}")))
 
 pdx_weather %>% 
   select(date, tmax) %>% #looking at date and precipitation
