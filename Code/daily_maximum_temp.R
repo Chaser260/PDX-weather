@@ -67,4 +67,3 @@ pdx_weather %>%
 
 ggsave("Figures/PDX_Record_Heat.png") 
 
-
