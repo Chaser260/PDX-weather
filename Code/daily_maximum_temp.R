@@ -23,7 +23,7 @@ pdx_weather %>%
   mutate(year = year(date), 
          month = month(date),
          day = day(date),
-         is_this_year = year == 2022) %>%
+         is_this_year = year == 2022 & month == "10") %>%
   filter(year != 1938) %>% #remove partial year and leap days
   group_by(year) %>% 
   mutate(new_date = ymd(glue("2022-{month}-{day}"))) %>% #create pseudo date column so x axis only contains one year worth of dates
@@ -56,7 +56,7 @@ pdx_weather %>%
   scale_y_continuous(breaks = c(20, 40, 60, 80, 100, 120)) +
   labs(x = NULL, y = "Daily Maximum Temperature (\u00B0F)",
        title = "Record Heat",
-       subtitle = glue("September of <span style = 'color: dodgerblue'>2022</span> is the hottest September on record so far")) +
+       subtitle = glue("September of <span style = 'color: dodgerblue'>2022</span> was the hottest September on record")) +
   theme_classic() +
   theme(
     axis.text.x = element_text(angle = 45, vjust = 0.5),
@@ -65,5 +65,5 @@ pdx_weather %>%
     plot.subtitle = element_textbox_simple(margin = margin(b=10)),
   )
 
-ggsave("Figures/PDX_Record_Heat.png") 
+ggsave("Figures/PDX_Record_Heat_Spetember.png") 
 
