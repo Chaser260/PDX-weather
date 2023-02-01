@@ -1,5 +1,7 @@
 # PDX Weather Analysis
 
-Prior to moving to Portland in 2011, I lived in Bend, OR. Growing up, I always heard it was constantly dreary and rainy in Portland all year long. However, since moving here, I fully expected it to be wetter. I'm curious to see what the historical precipitation looks like in Portland, and whether it has been drier than usual since I moved to Portland.
+I'm fascinated by climate change and weather related events. To develop my skills with the program language R, I pulled real climate data for the PDX weather station dating back to 1938 from NOAA.gov, to help me visualize what weather in Portland has looked like over the last 84 years.
 
-I am going to use public data from the National Centers For Environmental Information for the Portland area and analyze precipitation, as well as other climate related data from the PDX weather station.
+Prior to moving to Portland in 2011, I lived in Bend, OR. Growing up, all I ever heard about was how wet and rainy Portland was. People made it sound like Portland never saw the sun. In my exploration of the data, I found some interesting facts relating to precipitation, snow, and temperature change in Portland. All this Portland data made me curious to compare it to my home town of Bend, OR.
+
+Spoiler alert! Although the average temperature in Portland has been rising over the past 80 years, temperatures in Bend have actually declined!
